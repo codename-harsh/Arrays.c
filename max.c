@@ -13,4 +13,4 @@ int main(){
     printf("The max among the array elements is  : %d",max);
     return 0;
 }
-// isme hamne system laga dia ki array ka pehla element hi max me dal ke baki compare krdia ;/ no in the second code ham new library fncn ka use krenge limits.h ;)
+// isme hamne system laga dia ki array ka pehla element hi max me dal ke baki compare krdia ;/ now, in the second code ham new library fncn ka use krenge limits.h ;)

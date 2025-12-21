@@ -13,7 +13,6 @@ int main(){
         //     return 0;
         // }
         // printf("Not Present :/");
-
         int flag=0;
         for(int i=0;i<n;i++){
             if(key==a[i]){ flag=1; break; }

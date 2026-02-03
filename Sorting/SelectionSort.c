@@ -1,13 +1,20 @@
 #include<stdio.h>
 int main(){
-int arr[7]={3,5555,6,5885954,7,2,9}; 
-for(int i=0;i<7-1;i++){
-    int min=arr[i],index=i;
-    for(int j=i+1;j<7;j++){
-    if(arr[j]<min){ min=arr[j]; index=j; }
+    int n; puts("Enter the number of integers : ");
+    scanf("%d",&n);
+    int arr[n],min,temp;
+for(int i=0;i<n;i++) scanf("%d",&arr[i]);
+// Now starting the main shit //
+for(int i=0;i<n-1;i++) {
+    min = i;
+    for(int j=i+1;j<n;j++) {
+        if(arr[j]<arr[min]) min = j;
     }
-int t=arr[i]; arr[i]=arr[index]; arr[index]=t; } 
-    for(int i=0;i<7;i++){
-        printf("%d ",arr[i]);
-    }
+    temp = arr[i]; 
+    arr[i]=arr[min];
+    arr[min]=temp;
+}
+puts("Sorted array :");
+for(int i=0;i<n;i++) printf("%d ",arr[i]);
+return 0;
 }

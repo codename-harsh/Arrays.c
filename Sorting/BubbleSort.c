@@ -1,14 +1,25 @@
+/* A proper optimised bubble sorting code !! */
 #include<stdio.h>
+#include<stdbool.h>
 int main(){
-    int arr[7]={4,3,5,6,7,8,9}; 
-    int n=7;
-    // ascending order hai //
+    int n; puts("Enter the number of elements ");
+    scanf("%d",&n);
+    int arr[n];
+    puts("Enter the elements accordingly :");
+    for(int i=0;i<n;i++) scanf("%d",&arr[i]);
 for(int i=0;i<n-1;i++){
-for(int j=0;j<=n-1-i;j++){
- if(arr[j]>arr[j+1]){int  temp = arr[j];
+    bool flag = true;
+for(int j=0;j<n-1-i;j++){
+            if(arr[j]>arr[j+1])
+            {
+                int  temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
-} } }
+                bool flag  = false;
+            }
+        }
+        if(flag == true) break;
+    }
 puts("The sorted elements are as follows :");
 for(int i=0;i<n;i++){
     printf("%d ",arr[i]); }

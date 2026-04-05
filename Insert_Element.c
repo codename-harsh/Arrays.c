@@ -1,8 +1,9 @@
 #include <stdio.h>
 int main(){
-    int a[100], n, item, pos ;
+    int n, item, pos ;
     printf("Enter the number of elements : \n");
     scanf("%d",&n);
+    int a[n];
     printf("Enter the elements of array : \n");
     for(int i = 0; i<n ; i++) scanf("%d",&a[i]);
     printf("Enter the element to be inserted : \n"); scanf("%d",&item);
